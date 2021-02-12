@@ -1,0 +1,21 @@
+.Login {
+  width: auto;
+  height: 100vh;
+  background-color: #ff6a51;
+  position: relative;
+}
+
+.input-fields {
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1px 3px 15px 3px rgba(0, 0, 0, 0.87);
+  background-color: white;
+}
