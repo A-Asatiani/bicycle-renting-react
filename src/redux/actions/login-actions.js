@@ -14,4 +14,7 @@ export const emailValidation = (value) => ({
   value: value,
 });
 
-// export const passwordValidation = (value) => {};
+export const passwordValidation = (value) => ({
+  type: action.PASSWORDVALIDATION,
+  value: value,
+});

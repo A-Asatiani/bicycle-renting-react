@@ -1,4 +1,8 @@
-import { ONCHANGE, EMAILVALIDATION } from "../types/login-types";
+import {
+  ONCHANGE,
+  EMAILVALIDATION,
+  PASSWORDVALIDATION,
+} from "../types/login-types";
 
 const initialState = {
   fields: {
@@ -34,6 +38,16 @@ export const loginReducer = (state = initialState, action) => {
             isPasswordCorrect: /(.+)@(.+){2,}\.(.+){2,}/.test(action.value)
               ? false
               : true,
+          },
+        },
+      };
+    case PASSWORDVALIDATION:
+      return {
+        fields: {
+          ...state.fields,
+          password: {
+            ...state.fields.password,
+            isPasswordCorrect: action.value.length < 5 ? true : false,
           },
         },
       };
