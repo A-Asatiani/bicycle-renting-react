@@ -8,3 +8,10 @@ export const onHandleChange = (id, value) => (
     value: value,
   }
 );
+
+export const emailValidation = (value) => ({
+  type: action.EMAILVALIDATION,
+  value: value,
+});
+
+// export const passwordValidation = (value) => {};
