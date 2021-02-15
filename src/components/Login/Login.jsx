@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   onHandleChange,
-  emailValidation,
-  passwordValidation,
-  axiosRequest,
+  fieldsValidation,
 } from "../../redux/actions/login-actions";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -13,10 +11,6 @@ import "./index.css";
 const Login = () => {
   const state = useSelector((state) => state.loginReducer);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    
-  });
 
   return (
     <div className="Login">
@@ -52,10 +46,9 @@ const Login = () => {
           color="primary"
           onClick={() =>
             dispatch(
-              axiosRequest(
+              fieldsValidation(
                 state.fields.email.value,
-                state.fields.password.value,
-                state.fields
+                state.fields.password.value
               )
             )
           }

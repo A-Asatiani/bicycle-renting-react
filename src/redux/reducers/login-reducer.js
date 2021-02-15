@@ -2,7 +2,6 @@ import {
   ONCHANGE,
   EMAILVALIDATION,
   PASSWORDVALIDATION,
-  ISBUTTONDISABLED,
 } from "../types/login-types";
 
 const initialState = {
