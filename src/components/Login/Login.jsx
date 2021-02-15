@@ -6,6 +6,7 @@ import {
 } from "../../redux/actions/login-actions";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 const Login = () => {
@@ -17,6 +18,7 @@ const Login = () => {
       <div className="input-fields">
         <TextField
           id="email"
+          label="email"
           value={state.fields.email.value}
           onChange={(e) =>
             dispatch(onHandleChange(e.target.id, e.target.value))
@@ -30,6 +32,7 @@ const Login = () => {
         />
         <TextField
           id="password"
+          label="password"
           value={state.fields.password.value}
           onChange={(e) =>
             dispatch(onHandleChange(e.target.id, e.target.value))
@@ -41,6 +44,13 @@ const Login = () => {
               : ""
           }
         />
+        <span className="registration-descr">
+          Have no acc yet?
+          <Link className="registration-link" to="/register">
+            {" "}
+            Register
+          </Link>
+        </span>
         <Button
           variant="contained"
           color="primary"
