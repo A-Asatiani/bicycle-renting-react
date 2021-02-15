@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   onHandleChange,
   emailValidation,
   passwordValidation,
+  axiosRequest,
 } from "../../redux/actions/login-actions";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -12,6 +13,10 @@ import "./index.css";
 const Login = () => {
   const state = useSelector((state) => state.loginReducer);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    
+  });
 
   return (
     <div className="Login">
@@ -22,7 +27,6 @@ const Login = () => {
           onChange={(e) =>
             dispatch(onHandleChange(e.target.id, e.target.value))
           }
-          onBlur={(e) => dispatch(emailValidation(e.target.value))}
           error={state.fields.email.isPasswordCorrect ? true : false}
           helperText={
             state.fields.email.isPasswordCorrect
@@ -36,7 +40,6 @@ const Login = () => {
           onChange={(e) =>
             dispatch(onHandleChange(e.target.id, e.target.value))
           }
-          onBlur={(e) => dispatch(passwordValidation(e.target.value))}
           error={state.fields.password.isPasswordCorrect ? true : false}
           helperText={
             state.fields.password.isPasswordCorrect
@@ -44,7 +47,19 @@ const Login = () => {
               : ""
           }
         />
-        <Button variant="contained" color="primary">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() =>
+            dispatch(
+              axiosRequest(
+                state.fields.email.value,
+                state.fields.password.value,
+                state.fields
+              )
+            )
+          }
+        >
           Sign in
         </Button>
       </div>
