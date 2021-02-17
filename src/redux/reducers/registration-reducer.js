@@ -1,4 +1,8 @@
-import { ONCHANGE, FIELDSVALIDATION } from "../types/registration-types";
+import {
+  ONCHANGE,
+  FIELDSVALIDATION,
+  REGISTER,
+} from "../types/registration-types";
 import { fieldsConfig } from "../../components/registration/regFieldsconf";
 
 const initialState = {
@@ -17,7 +21,7 @@ export const regReducer = (state = initialState, action) => {
         fields: newState,
       };
     case FIELDSVALIDATION:
-      const validationFields = [...state.fields].map((element, index, arr) => ({
+      const validationFields = [...state.fields].map((element) => ({
         id: element.id,
         label: element.label,
         value: element.value,

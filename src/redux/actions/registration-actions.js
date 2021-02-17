@@ -6,6 +6,19 @@ export const onChangeHandler = (id, value) => ({
   value: value,
 });
 
-export const fieldsValidation = () => ({
+const fieldsValidation = () => ({
   type: type.FIELDSVALIDATION,
 });
+
+export const validate = (fields) => (dispatch) => {
+  dispatch(fieldsValidation());
+  const isFieldsValidated = fields.fields.some((element) => {
+    return element.error;
+  });
+  if (isFieldsValidated) return;
+  return axiosReq();
+};
+
+const axiosReq = () => {
+  return console.log("registration passed successfully");
+};

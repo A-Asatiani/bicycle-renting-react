@@ -4,13 +4,13 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import {
   onChangeHandler,
-  fieldsValidation,
+  validate,
 } from "../../redux/actions/registration-actions";
 
 const Registration = () => {
   const state = useSelector((state) => state.regReducer);
   const dispatch = useDispatch();
-  
+
   return (
     <div className="registration">
       {state.fields.map((element, key) => {
@@ -31,7 +31,7 @@ const Registration = () => {
       <Button
         variant="contained"
         color="primary"
-        onClick={() => dispatch(fieldsValidation())}
+        onClick={() => dispatch(validate(state))}
       >
         Register
       </Button>
