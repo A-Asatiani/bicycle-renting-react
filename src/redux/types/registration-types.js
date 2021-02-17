@@ -1,0 +1,3 @@
+export const ONCHANGE = "ONCHANGE";
+export const FIELDSVALIDATION = "FIELDSVALIDATION";
+export const REGISTER = "REGISTER";
