@@ -1,8 +1,4 @@
-import {
-  ONCHANGE,
-  FIELDSVALIDATION,
-  REGISTER,
-} from "../types/registration-types";
+import { ONCHANGE, FIELDSVALIDATION } from "../types/registration-types";
 import { fieldsConfig } from "../../components/registration/regFieldsconf";
 
 const initialState = {

@@ -25,13 +25,13 @@ export const fieldsConfig = [
     label: "first name",
     value: "",
     error: false,
-    helperText: "first name must be min 3 chars",
+    helperText: "first name must be min 5 chars",
   },
   {
     id: "lastName",
     label: "last name",
     value: "",
     error: false,
-    helperText: "first name must be min 3 chars",
+    helperText: "first name must be min 5 chars",
   }
 ];
