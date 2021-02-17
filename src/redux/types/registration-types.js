@@ -1,1 +1,2 @@
 export const ONCHANGE = "ONCHANGE";
+export const FIELDSVALIDATION = "FIELDSVALIDATION";

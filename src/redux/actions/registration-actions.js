@@ -5,3 +5,7 @@ export const onChangeHandler = (id, value) => ({
   name: id,
   value: value,
 });
+
+export const fieldsValidation = () => ({
+  type: type.FIELDSVALIDATION,
+});

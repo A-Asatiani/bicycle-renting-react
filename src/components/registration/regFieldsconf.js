@@ -20,11 +20,4 @@ export const fieldsConfig = [
     error: false,
     helperText: "password must be min 5 chars",
   },
-  {
-    id: "repPassword",
-    label: "rep-password",
-    value: "",
-    error: false,
-    helperText: "passwords not mutch",
-  },
 ];
