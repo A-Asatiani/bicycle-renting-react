@@ -1,0 +1,45 @@
+.registration {
+  display: flex;
+  width: auto;
+  height: 100vh;
+  position: relative;
+}
+
+.reg-inputs-wrapper {
+  position: absolute;
+  width: 450px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.go-back-wrapper {
+  height: 100vh;
+  width: 140px;
+  position: fixed;
+  background-color: #edeef0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.go-back-link {
+  color: #626d7a;
+  text-align: center;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.go-back-wrapper:hover {
+  transition: 0.4s;
+  background-color: grey;
+}
+
+.go-back-link:hover {
+  color: white;
+}

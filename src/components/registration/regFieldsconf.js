@@ -1,5 +1,19 @@
 export const fieldsConfig = [
   {
+    id: "firstName",
+    label: "first name",
+    value: "",
+    error: false,
+    helperText: "first name must be min 5 chars",
+  },
+  {
+    id: "lastName",
+    label: "last name",
+    value: "",
+    error: false,
+    helperText: "first name must be min 5 chars",
+  },
+  {
     id: "email",
     label: "email",
     value: "",
@@ -20,18 +34,4 @@ export const fieldsConfig = [
     error: false,
     helperText: "password must be min 5 chars",
   },
-  {
-    id: "firstName",
-    label: "first name",
-    value: "",
-    error: false,
-    helperText: "first name must be min 5 chars",
-  },
-  {
-    id: "lastName",
-    label: "last name",
-    value: "",
-    error: false,
-    helperText: "first name must be min 5 chars",
-  }
 ];
