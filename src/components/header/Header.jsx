@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import DropDown from "./dropdown/DropDown";
+import { withNamespaces } from "react-i18next";
 import "./index.css";
 
-const Header = () => {
+const Header = ({ t }) => {
   const listOfBike = ["awdad", "awdawd"];
 
   return (
@@ -25,7 +26,7 @@ const Header = () => {
             renderInput={(params) => (
               <TextField
                 {...params}
-                label="Search..."
+                label={t("Search...")}
                 margin="normal"
                 variant="outlined"
               />
@@ -40,4 +41,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withNamespaces()(Header);
