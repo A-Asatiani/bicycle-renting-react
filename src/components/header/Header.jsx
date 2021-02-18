@@ -3,11 +3,12 @@ import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import DropDown from "./dropdown/DropDown";
 import "./index.css";
 
 const Header = () => {
   const listOfBike = ["awdad", "awdawd"];
-  
+
   return (
     <div className="header">
       <div className="header-items-wrapper">
@@ -30,6 +31,9 @@ const Header = () => {
               />
             )}
           />
+        </div>
+        <div className="drop-down-wrapper">
+          <DropDown />
         </div>
       </div>
     </div>
