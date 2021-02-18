@@ -1,0 +1,36 @@
+.header {
+  width: 800px;
+  position: relative;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.header-items-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.logo-wrapper {
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  z-index: 100;
+  right: 10;
+  display: flex;
+}
+
+.logo-wrapper img {
+  width: 200px;
+  height: 50px;
+}
+
+.search-bar {
+  /* display: flex; */
+  width: 150px;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  /* display: flex; */
+}

@@ -5,3 +5,8 @@
   text-align: center;
   justify-content: center;
 }
+
+.header-main-wrapper {
+  position: relative;
+  width: 100%;
+}
